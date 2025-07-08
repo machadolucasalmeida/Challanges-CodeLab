@@ -1,0 +1,176 @@
+/*BREAK POINTS
+MOBILE: 
+xs - <576PX
+
+TABLET: 
+SM - >=576PX
+MD - >=768PX
+
+LAPTOP / PC: 
+LG - >=992PX 
+XL - >= 1200PX
+XXL - >= 1400PX 
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --brand-color: #7ca2f4;
+
+  --dark: #121214;
+
+  --gray: #f3f7ff;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Archivo", sans-serif;
+}
+
+.message {
+  padding: 20px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.header-container {
+  background-image: url("image/image-michael-jordan.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  padding: 0 50px;
+
+}
+
+.header-container img {
+  margin: 62px 0;
+}
+
+.header-container .header-text {
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.header-text p {
+  font-size: 22px;
+}
+
+.header-text {
+  padding-bottom: 124px;
+}
+
+.products-container {
+  padding: 76px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.products-text h2 {
+  font-weight: 600;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.products-text p {
+  text-align: center;
+  font-size: 20px;
+}
+
+.products-text {
+  margin-bottom: 76px;
+}
+
+.shoes-card {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.card-description-container {
+  display: flex;
+  align-items: start;
+  gap: 16px;
+  flex-direction: column;
+}
+
+.shoes-card .product-name {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.shoes-card .tag {
+  font-size: 18px;
+  color: var(--brand-color);
+  font-weight: 500;
+}
+
+.shoes-card .product-price {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.image-container {
+  background-color: var(--gray);
+  display: flex;
+  justify-content: center;
+  padding: 42px;
+  margin-bottom: 28px;
+}
+
+@media (min-width: 730px) {
+
+  .header-text p {
+    width: 400px;
+  }
+
+  .products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    padding: 76px 50px;
+    flex-direction: unset;
+    align-items: unset;
+  }
+
+  .products-text {
+    grid-column: 1 / -1;
+    margin-bottom: 76px;
+  }
+
+  .shoes-card {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .header-text p {
+    width: 500px;
+  }
+
+  .header-container {
+    padding-left: 380px;
+  }
+
+  .products-container {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 76px 20px;
+  }
+}
